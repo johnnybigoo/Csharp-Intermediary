@@ -5,9 +5,11 @@ namespace Maxime
 {
     class Program
     {
+        private const string V = "Joao Vicente";
+
         static void Main(string[] args)
         {
-            Produto papel1 = new Produto();
+            Produto papel1 = new Produto();    
             papel1.Codigo = "01";
             papel1.Modelo = "A4";
             papel1.Marca = "Canon";
@@ -28,13 +30,16 @@ namespace Maxime
             papel3.Valor = 11;
             papel3.ImpostoFederal = 3.1;
 
+            Boleto boleto = new Boleto();           
+            boleto.Comprador = "Empresa Exemplo 1".ToUpper();
+            
+    
             Registradora registradora = new Registradora();
             registradora.addProduto(papel1);
             registradora.addProduto(papel2);
             registradora.addProduto(papel3);
 
-
-
+            Console.WriteLine("Comprador: " + registradora.getNomeDoComprador(boleto));
             Console.WriteLine("Produto 1: " + registradora.getNomeDoProduto(papel1));
             Console.WriteLine("Produto 2: " + registradora.getNomeDoProduto(papel2));
             Console.WriteLine("Produto 3: " + registradora.getNomeDoProduto(papel3));

@@ -17,12 +17,21 @@ namespace Maxime.Entities
         {
             return total;
         }
-
+        public string getNomeDoComprador(Boleto boleto)
+        {
+            /*comprador
+            -----------------------
+            */
+            return boleto.Comprador + "\n" + "-----------------------" + "\n";
+        }
         public string getNomeDoProduto(Produto produto)
         {
             //código/modelo – marca
+            
             return produto.Codigo + " / " + produto.Modelo + " - " + produto.Marca;
         }
+
+        
     }
 }
 

@@ -13,12 +13,21 @@ namespace Maxime.Entities
         private DateTime vencimento;
         private const double TAXA = 2.00;
         private const int PRAZO = 5;
+
+        public string Comprador { get => comprador; set => comprador = value; }
+        public double Valor { get => valor; set => valor = value; }
+        public DateTime Vencimento { get => vencimento; set => vencimento = value; }
+
+        public static double TAXA1 => TAXA;
+
+        public static int PRAZO1 => PRAZO;
     }
+     
 }
 
 /* Luana's code
  
- using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
