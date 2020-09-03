@@ -20,9 +20,6 @@ namespace Maxime.Entities
 
         public static double TAXA1 => TAXA;
 
-        public static int PRAZO1 => PRAZO;
-
-
 
         //+aplicaDesconto(double, desconto, boolean porcento): Void
         public void aplicaDesconto(double desconto, bool porcento)
