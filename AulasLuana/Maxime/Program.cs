@@ -39,11 +39,11 @@ namespace Maxime
             registradora.addProduto(papel2);
             registradora.addProduto(papel3);
 
-            Console.WriteLine("Comprador: " + registradora.getNomeDoComprador(boleto));
+            Console.WriteLine("Cliente: " + registradora.getNomeDoComprador(boleto));
             Console.WriteLine("Produto 1: " + registradora.getNomeDoProduto(papel1));
             Console.WriteLine("Produto 2: " + registradora.getNomeDoProduto(papel2));
             Console.WriteLine("Produto 3: " + registradora.getNomeDoProduto(papel3));
-            Console.WriteLine("Total a pagar: {0:0.00} ", registradora.getTotal());
+            Console.WriteLine("\n" + "Total a pagar: {0:0.00} ", registradora.getTotal());
         }
     }
 }

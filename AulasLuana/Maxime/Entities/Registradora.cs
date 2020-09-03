@@ -17,9 +17,11 @@ namespace Maxime.Entities
         {
             return total;
         }
+
+
         public string getNomeDoComprador(Boleto boleto)
         {
-            /*comprador
+            /*comprador COMMIT 03/09
             -----------------------
             */
             return boleto.Comprador + "\n" + "-----------------------" + "\n";
