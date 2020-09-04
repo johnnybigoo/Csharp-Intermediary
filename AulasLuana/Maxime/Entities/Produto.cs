@@ -13,13 +13,22 @@ namespace Maxime.Entities
         public string Modelo { get => modelo; set => modelo = value; }
         public string Marca { get => marca; set => marca = value; }
         public double ImpostoFederal { get => impostoFederal; set => impostoFederal = value; }
-        public double Valor { get => valor; set => valor = value; }
-        public double ImpostoProvincial { get => impostoProvincial; set => impostoProvincial = value; }
+        public double ImpostoProvincial { set => impostoProvincial = value; }
+        public double Valor { set => valor = value; }
+        public double Preco { get => impostoFederal + impostoProvincial; }
+
+
+        public double getPreco()
+        {
+            return valor + impostoFederal + impostoProvincial;
+
+        }
+
     }
 }
 
 /* Luana's code
- * 
+ *
  using System;
 using System.Collections.Generic;
 using System.Linq;

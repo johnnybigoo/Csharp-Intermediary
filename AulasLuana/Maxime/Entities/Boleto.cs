@@ -11,27 +11,40 @@ namespace Maxime.Entities
         private string comprador;
         private double valor;
         private DateTime vencimento;
-        private const double TAXA = 2.00;
+        private double taxa = 2.00;
         private const int PRAZO = 5;
 
-        public string Comprador { get => comprador; set => comprador = value; }
-        public double Valor { get => valor; set => valor = value; }
-        public DateTime Vencimento { get => vencimento; set => vencimento = value; }
+        public string Comprador { get => comprador.ToUpper(); set => comprador = value; }
+        public double Valor { get => valor + taxa; set => valor = value; }
+        public double Taxa { set => taxa = value; }
 
-        public static double TAXA1 => TAXA;
-
+        //{ get => vencimento; } //Lambda
+        public DateTime getVencimento()
+        {
+            DateTime Hoje = DateTime.Today;
+           //if(Hoje.DayOfWeek == DayOfWeek.Saturday)
+            vencimento = Hoje.AddDays(PRAZO);
+            return vencimento;
+        }
 
         //+aplicaDesconto(double, desconto, boolean porcento): Void
         public void aplicaDesconto(double desconto, bool porcento)
         {
-            
-        } 
+            if(porcento  && desconto > 0)
+            {
+                double desc = Calculadora.porcentagem(valor , desconto)
+                valor -= desc;
+            }
+            else{
+                valor -= desconto;
+            }
+        }
     }
-     
+
 }
 
 /* Luana's code
- 
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
