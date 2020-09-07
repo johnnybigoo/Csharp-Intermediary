@@ -49,9 +49,11 @@ namespace Maxime
             boleto.Comprador = "Empresa Exemplo 1";
             boleto.Valor = registradora.getTotal();
             boleto.Taxa = 3.2;
+            boleto.aplicaDesconto(8, false);
 
             Console.WriteLine("Vencimento: " + boleto.getVencimento());
             Console.WriteLine("Comprador: " + boleto.Comprador);
+            Console.WriteLine("Valor do Boleto: " + boleto.Valor);
 
 
 
