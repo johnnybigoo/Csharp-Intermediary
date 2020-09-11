@@ -29,16 +29,16 @@ namespace Maxime.Entities
         public string getNomeDoProduto(Produto produto)
         {
             //código/modelo – marca
-            
+
             return produto.Codigo + " / " + produto.Modelo + " - " + produto.Marca;
         }
 
-        
+
     }
 }
 
 /* Luana's code
- * 
+ *
  using System;
 using System.Collections.Generic;
 using System.Linq;
