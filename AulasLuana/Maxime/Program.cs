@@ -33,6 +33,7 @@ namespace Maxime
             Boleto boleto = new Boleto();           
             boleto.Comprador = "Empresa Exemplo 1".ToUpper();
             
+            
     
             Registradora registradora = new Registradora();
             registradora.addProduto(papel1);

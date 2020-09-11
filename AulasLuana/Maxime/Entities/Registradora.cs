@@ -10,7 +10,7 @@ namespace Maxime.Entities
 
         public void addProduto(Produto produto)
         {
-            total += produto.Valor + produto.ImpostoFederal;
+            total = total + produto.getPreco();
         }
 
         public double getTotal()
